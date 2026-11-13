@@ -1,0 +1,30 @@
+{
+  "name": "resonance-music-universe",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5186 --strictPort",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 5186",
+    "test": "node scripts/verify-data.mjs",
+    "format": "prettier --write src scripts vite.config.ts tsconfig.json package.json",
+    "format:check": "prettier --check src scripts vite.config.ts tsconfig.json package.json",
+    "lint": "node scripts/check-conventions.mjs && pnpm format:check"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "prettier": "^3.10.1",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8"
+  },
+  "packageManager": "pnpm@9.12.3"
+}
